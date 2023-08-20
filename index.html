@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Order Form</title>
+  <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h1>Surya Narayan Rao Seva Kendra</h1>
+        <div class="navbar-buttons">
+          <a href ="index3.html"><button id="updateDataBtn">Update</button></a>
+          <a href ="index2.html"><button id="showDataBtn">Show</button></a>
+          <a href ="index.html"><button id="updateDataBtn">Create</button></a>
+        </div>
+      </nav>
+
+  <form id="orderForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+    <label for="address">Address:</label>
+    <input type="text" id="address" required>
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" required>
+    <h2>Items:</h2>
+    <div class="food-item">
+      <input type="checkbox" name="food" value="noodles" id="noodles">
+      <label  for="Railing">Railing</label>
+      <input class ="hello" type="number"  id="noodlesQty" min="0" value="0" required>
+    </div>
+    <div class="food-item">
+      <input type="checkbox" name="food" value="WheelChair" id="WheelChair">
+      <label for="Wheel Chair">Wheel Chair</label>
+      <input class ="hello" type="number" id="WheelChairQty" min="0" value="0" required>
+    </div>
+    <div class="food-item">
+      <input type="checkbox" name="food" value="wheelCommode" id="wheelCommode">
+      <label for="wheel Ch.with commode">Wheel Ch with commode</label>
+      <input class ="hello" type="number" id="wheelCommodeQty" min="0" value="0" required>
+    </div>
+    <div class="food-item">
+      <input type="checkbox" name="food" value="Walker" id="Walker">
+      <label for="Walker">Walker</label>
+      <input class ="hello" type="number" id="WalkerQty" min="0" value="0" required>
+    </div>
+    <div class="food-item">
+      <input type="checkbox" name="food" value="CommodeChair" id="CommodeChair">
+      <label for="Commode Chair">Commode Chair</label>
+      <input class ="hello" type="number" id="CommodeChairQty" min="0" value="0" required>
+    </div>
+    <div class="food-item">
+      <input type="checkbox" name="food" value="CommodeRaiser" id="CommodeRaiser">
+      <label for="Commode Raiser">Commode Raiser</label>
+      <input class ="hello" type="number" id="CommodeRaiserQty" min="0" value="0" required>
+    </div>
+    <div class="food-item">
+      <input type="checkbox" name="food" value="Stick" id="Stick">
+      <label for="Stick">Stick</label>
+      <input class ="hello" type="number" id="StickQty" min="0" value="0" required>
+    </div>
+    <div class="food-item">
+      <input type="checkbox" name="food" value="Kubdi" id="Kubdi">
+      <label for="Kubdi">Kubdi</label>
+      <input class ="hello" type="number" id="KubdiQty" min="0" value="0" required>
+    </div>
+    <div class="food-item">
+      <input type="checkbox" name="food" value="AirBed" id="AirBed">
+      <label for="Air Bed">Air Bed</label>
+      <input class ="hello" type="number" id="AirBedQty" min="0" value="0" required>
+    </div>
+    <div class="food-item">
+      <input type="checkbox" name="food" value="SuctionMachine" id="SuctionMachine">
+      <label for="Suction Machine">Suction Machine</label>
+      <input class ="hello" type="number" id="SuctionMachineQty" min="0" value="0" required>
+    </div>
+    <div class="food-item">
+      <input type="checkbox" name="food" value="PhyCycle" id="PhyCycle">
+      <label for="Phy Cycle">Phy Cycle</label>
+      <input class ="hello" type="number" id="PhyCycleQty" min="0" value="0" required>
+    </div>
+    <div class="food-item">
+      <input type="checkbox" name="food" value="OxyConcentrater" id="OxyConcentrater">
+      <label for="Oxy Concentrater">Oxy Concentrater</label>
+      <input class ="hello" type="number" id="OxyConcentraterQty" min="0" value="0" required>
+    </div>
+    <div class="food-item">
+      <input type="checkbox" name="food" value="BiPep" id="BiPep">
+      <label for="Bi Pep">Bi Pep</label>
+      <input class ="hello" type="number" id="BiPepQty" min="0" value="0" required>
+    </div>
+    <br>
+    <label for="orderDate">Order Date:</label>
+    <input type="date" id="orderDate" required>
+
+    <label for="recivedorderDate">Recived Date:</label>
+    <input type="date" id="recivedorderDate">
+    <br>
+    <label for="rentamt">Rent Amount</label>
+    <input type="text" id="rentamt" required>
+    
+    <label for="depoamt">Deposit Amount</label>
+    <input type="text" id="depoamt" required>
+
+
+    <label for="recdamt">Received Amount</label>
+    <input type="text" id="recdamt">
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" required>
+    <input type="submit" value="Place Order">
+  </form>
+
+ 
+
+<!-- Import the Firebase App and Database SDKs -->
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+
+<!-- Your custom JavaScript file (app.js) -->
+<script src="app3.js"></script>
+
+</body>
+</html>

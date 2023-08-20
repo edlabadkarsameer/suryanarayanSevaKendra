@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order Form</title>
+</head>
+<body>
+  <form id="orderForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required disabled>
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" required disabled>
+
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" required>
+
+    <h2>Items:</h2>
+    <div class="food-item">
+      <input type="checkbox" name="food" value="noodles" id="noodles">
+      <label for="Railing">Railing</label>
+      <input class="hello" type="number" id="noodlesQty" min="0" value="0" required>
+    </div>
+    <!-- Add more food items as needed -->
+
+    <br>
+    <label for="orderDate">Order Date:</label>
+    <input type="date" id="orderDate" required disabled>
+
+    <label for="recivedorderDate">Received Date:</label>
+    <input type="date" id="recivedorderDate" disabled>
+
+    <br>
+    <label for="rentamt">Rent Amount</label>
+    <input type="text" id="rentamt" required disabled>
+
+    <label for="depoamt">Deposit Amount</label>
+    <input type="text" id="depoamt" required disabled>
+
+    <label for="recdamt">Received Amount</label>
+    <input type="text" id="recdamt" disabled>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" required>
+
+    <input type="submit" value="Submit Phone Number">
+  </form>
+
+  <!-- Load Firebase SDK and your app.js -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
+  <script src="app5.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Order Form</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <h1>Surya Narayan Rao Seva Kendra</h1>
+
+  <form id="orderForm">
+    <!-- ... Your existing form elements ... -->
+  </form>
+
+  <button id="fetchDataBtn">Fetch Data</button>
+  <button id="downloadDataBtn">Download Data as Excel</button>
+
+  <table id="dataTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Items</th>
+      <th>Order Date</th>
+      <th>Received Date</th>
+      <th>Rent Amount</th>
+      <th>Deposit Amount</th>
+      <th>Received Amount</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody"> <!-- Add ID to tbody element -->
+    <!-- Data will be populated here dynamically -->
+  </tbody>
+</table>
+
+  <!-- Import the Firebase App and Database SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+  <!-- Your custom JavaScript file (app.js) -->
+  <script src="app2.js"></script>
+</body>
+</html>

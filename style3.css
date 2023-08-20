@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+  }
+  
+  h1 {
+    text-align: LEFT;
+    margin: 20px 0;
+    color: orange;
+  }
+ 
+  .food-item {
+    display: flex; /* Use flexbox to create a row layout */
+    align-items: left; /* Align items vertically in the center */
+    margin-bottom: 10px; /* Add some spacing between food items */
+    margin-left: 5px;
+  }
+
+  /* Style for the labels */
+  .food-item label {
+    flex: 5; /* Allow the label to take the available width */
+    margin-right: 10px; /* Add some space between label and input */
+  }
+
+  /* Style for the inputs */
+  .food-item input {
+    flex: 2; /* Allow the input to take twice the width of the label */
+    margin-right: 0px;
+  }
+  
+  .container {
+    max-width: 600px; 
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .food-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  input[type="submit"] {
+    padding: 10px;
+    background-color: orange;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  h2 {
+    margin-top: 30px;
+    font-size: 20px;
+    color: orange;
+  }
+  
+  #totalDeposit,
+  #totalAmount {
+    color: orange;
+    font-weight: bold;
+  }
+  
+  /* Responsive styles for smaller screens */
+  @media screen and (max-width: 600px) {
+    .container {
+      padding: 10px;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    h2 {
+      font-size: 18px;
+    }
+  
+    form {
+      gap: 10px;
+    }
+  }
+  
+
+  /* Your existing CSS styles */
+
+.navbar {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2px;
+  }
+  
+  .navbar h1 {
+    color: orangered;
+    align-items: center;
+    font-size: 20px;
+  }
+  
+  .navbar-buttons button {
+    margin: 5px;
+    padding: 8px 12px;
+    background-color: #fff;
+    color: orange;
+    border-radius: 5px;
+    border-color: orangered;
+    cursor: pointer;
+  }
+  
+  .navbar-buttons button:hover {
+    background-color: orange;
+    color: #fff;
+  }
+  
+  /* Media query for responsive design */
+  @media screen and (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar-buttons button {
+      margin-top: 10px;
+    }
+  }
+  

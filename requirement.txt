@@ -1,0 +1,30 @@
+Device.              Deposit.        Rent per Month
+Hosp.Bed            2000          400 एक रेलिंग
+                                                  450   दोन रेलिंग सहसा दोन देत नाही कारण खुप महाग आहेत रेलिंग
+
+Wh. Chair.            1000.          200
+
+Wh Chair 
+with commod.     1000.          300
+
+Walker.                    100.            50
+
+Com.Chair.              100.           50
+
+Com raiser 100.     50
+
+Stick.                        100.           50
+
+Kubdi.                      500.         200
+
+Air Bed.                    500.         200
+
+Suction Machine.   500.         200
+
+Foam Cushion.        300.        150
+
+Phy Cycle.                 500.        200
+
+Oxy Con.                5000.       125  per day
+
+Bi Pep.                  10000.     6500 per mth
