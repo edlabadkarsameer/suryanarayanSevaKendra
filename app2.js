@@ -60,11 +60,11 @@ document.getElementById("downloadDataBtn").addEventListener("click", () => {
   const password = prompt("Enter the password:");
   if (password === "1234") {
     ordersRef.once("value", (snapshot) => {
-      const data = [["Name", "Address", "Phone", "Food Items","Order Date", "Received Date", "Rent Amount", "Deposit Amount", "Received Amount"]];
+      const data = [["Name", "Address", "Phone","Order Date", "Received Date", "Rent Amount", "Deposit Amount", "Received Amount", "Items"]];
       snapshot.forEach((orderSnapshot) => {
         const orderData = orderSnapshot.val();
         const foodItems = formatFoodItems(orderData.selectedItems);
-        data.push([orderData.name, orderData.address, orderData.phone, foodItems,orderData.orderDate,orderData.recivedorderDate,orderData.rentamt,orderData.depoamt,orderData.recdamt]);
+        data.push([orderData.name, orderData.address, orderData.phone,orderData.orderDate,orderData.recivedorderDate,orderData.rentamt,orderData.depoamt,orderData.recdamt, foodItems]);
       });
       exportToExcel(data);
     });
