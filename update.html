@@ -3,23 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Order Details</title>
+    <title>Surya Narayan Rao Seva Kendra</title>
+    <link rel="stylesheet" href="update.css">
 </head>
 <body>
-    <h1>Update Order Details</h1>
+    <nav class="navbar">
+        <h1>Surya Narayan Rao Seva Kendra</h1><br></br>
+        <div class="navbar-buttons">
+          <a href ="index.html"><button id="updateDataBtn">Create</button></a>
+          <a href ="index2.html"><button id="showDataBtn">Show</button></a>
+          <a href ="update.html"><button id="updateDataBtn">Update</button></a>
+        </div>
+      </nav>
+
     <form id="searchForm">
-        <label for="phone">Enter Mobile Number:</label>
         <input type="text" id="phone" required>
         <button type="submit">Search</button>
     </form>
 
-    <form id="updateForm" style="display:none;">
+    <form class ="sameer" id="updateForm" style="display:none;">
         <!-- Add input fields to update details -->
         <label for="name">Name:</label>
         <input type="text" id="name" required><br>
-
-        <!-- Add input fields for other details (address, phone, etc.) -->
+        <label for="address">Address:</label>
+        <input type="text" id="address"><br>
+        <label for="depoamt">Deposite Amount:</label>
+        <input type="text" id="depoamt"><br>
+        <label for="recdamt">Received Amount:</label>
+        <input type="text" id="recdamt"><br>
+        <label for="rentamt">Rent Amount:</label>
+        <input type="text" id="rentamt"><br>
+        <label for="orderDate">Order Date:</label>
+        <input type="date" id="orderDate"><br>
+        <label for="recivedorderDate">Recived Date:</label>
+        <input type="date" id="recivedorderDate"><br>
+        <br>
         
+        <!-- Add input fields for other details (address, phone, etc.) -->
         <!-- Submit button to update the details -->
         <button type="submit">Update Details</button>
     </form>
@@ -27,102 +47,6 @@
     <!-- Initialize Firebase and include your Firebase configuration -->
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
-    <script>
-        const firebaseConfig = {
-            // Your Firebase configuration
-            apiKey: "AIzaSyBpRlMlSHx5yqk4TYwvhD45kIlTwXyoayI",
-    authDomain: "suryanarayanraosevakendra.firebaseapp.com",
-    databaseURL: "https://suryanarayanraosevakendra-default-rtdb.firebaseio.com",
-    projectId: "suryanarayanraosevakendra",
-    storageBucket: "suryanarayanraosevakendra.appspot.com",
-    messagingSenderId: "350849877887",
-    appId: "1:350849877887:web:75c62830a17e04378abc4a"
-        };
-        firebase.initializeApp(firebaseConfig);
-
-        const database = firebase.database();
-
-        const searchForm = document.getElementById("searchForm");
-        const updateForm = document.getElementById("updateForm");
-        const phoneInput = document.getElementById("phone");
-        const nameInput = document.getElementById("name");
-
-        searchForm.addEventListener("submit", (e) => {
-            e.preventDefault();
-
-            // Get the mobile number entered by the user
-            const phoneNumber = phoneInput.value;
-
-            // Perform a Firebase query to find the order with the matching mobile number
-            const ordersRef = database.ref("orders");
-            ordersRef
-                .orderByChild("phone")
-                .equalTo(phoneNumber)
-                .once("value")
-                .then((snapshot) => {
-                    if (snapshot.exists()) {
-                        // Data found for the provided mobile number
-                        const orderData = snapshot.val();
-                        // Assuming there's only one order associated with this mobile number
-                        const orderId = Object.keys(orderData)[0];
-                        
-                        // Populate the form fields with the retrieved data
-                        nameInput.value = orderData[orderId].name;
-                        // Populate other fields
-
-                        // Display the update form
-                        updateForm.style.display = "block";
-                    } else {
-                        alert("Order not found for the given mobile number.");
-                    }
-                })
-                .catch((error) => {
-                    console.error("Error searching for order:", error);
-                });
-        });
-
-        updateForm.addEventListener("submit", (e) => {
-            e.preventDefault();
-
-            // Get updated data from the form
-            const updatedName = nameInput.value;
-            // Get other updated data from input fields
-            
-            // Get the order ID based on the mobile number (phone)
-            const phoneNumber = phoneInput.value;
-            const ordersRef = database.ref("orders");
-            ordersRef
-                .orderByChild("phone")
-                .equalTo(phoneNumber)
-                .once("value")
-                .then((snapshot) => {
-                    if (snapshot.exists()) {
-                        // Assuming there's only one order associated with this mobile number
-                        const orderId = Object.keys(snapshot.val())[0];
-                        
-                        // Update the data in Firebase
-                        const orderRef = ordersRef.child(orderId);
-                        orderRef.update({
-                            name: updatedName,
-                            // Update other fields here
-                        })
-                        .then(() => {
-                            alert("Order details updated successfully!");
-                            // Clear the form and hide it
-                            updateForm.reset();
-                            updateForm.style.display = "none";
-                        })
-                        .catch((error) => {
-                            console.error("Error updating order details:", error);
-                        });
-                    } else {
-                        alert("Order not found for the given mobile number.");
-                    }
-                })
-                .catch((error) => {
-                    console.error("Error searching for order:", error);
-                });
-        });
-    </script>
+    <script src="update.js"></script>
 </body>
 </html>

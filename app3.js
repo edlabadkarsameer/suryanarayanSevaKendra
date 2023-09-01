@@ -1,3 +1,6 @@
+const password = prompt("Enter the password:");
+  if (password === "1234") {
+
 // Your Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyBpRlMlSHx5yqk4TYwvhD45kIlTwXyoayI",
@@ -15,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const orderDateInput = document.getElementById("orderDate");
     const currentDate = new Date().toISOString().split("T")[0];
     orderDateInput.value = currentDate;
-  
     // Your existing event listeners and functions ...
   });
   
@@ -28,12 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
   orderForm.addEventListener("submit", (e) => {
     e.preventDefault();
   
-    // Verify password (1234)
-    const password = document.getElementById("password").value;
-    if (password !== "1234") {
-      alert("Invalid password! Please enter the correct password.");
-      return;
-    }
   
     // Get user details from the form
     const name = document.getElementById("name").value;
@@ -86,4 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
           console.error("Error saving order:", error);
         });
     }
-  
+  }
+  else{
+    alert("Invalid password! Please try again.");
+  }

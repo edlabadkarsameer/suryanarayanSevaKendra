@@ -1,3 +1,5 @@
+const password = prompt("Enter the password:");
+  if (password === "1234") {
 // Initialize Firebase with your project configuration
 // You should replace this config with your own Firebase config
 // You can find the config details in your Firebase project settings
@@ -24,7 +26,6 @@ const ordersRef = database.ref("orders");
 // Fetch data and display in the table
 document.getElementById("fetchDataBtn").addEventListener("click", () => {
     const password = prompt("Enter the password:");
-    if (password === "1234") {
       ordersRef.once("value", (snapshot) => {
         const tableBody = document.getElementById("tableBody"); // Correctly reference tbody element
         tableBody.innerHTML = ""; // Clear existing data
@@ -47,9 +48,7 @@ document.getElementById("fetchDataBtn").addEventListener("click", () => {
           tableBody.appendChild(row);
         });
       });
-    } else {
-      alert("Invalid password! Please try again.");
-    }
+    
   });
   
   // ... Your other existing code ...
@@ -57,8 +56,6 @@ document.getElementById("fetchDataBtn").addEventListener("click", () => {
 
 // Download data as Excel
 document.getElementById("downloadDataBtn").addEventListener("click", () => {
-  const password = prompt("Enter the password:");
-  if (password === "1234") {
     ordersRef.once("value", (snapshot) => {
       const data = [["Name", "Address", "Phone","Order Date", "Received Date", "Rent Amount", "Deposit Amount", "Received Amount", "Items"]];
       snapshot.forEach((orderSnapshot) => {
@@ -68,9 +65,7 @@ document.getElementById("downloadDataBtn").addEventListener("click", () => {
       });
       exportToExcel(data);
     });
-  } else {
-    alert("Invalid password! Please try again.");
-  }
+
 });
 
 // Function to format the food items as a comma-separated string
@@ -90,3 +85,7 @@ function exportToExcel(data) {
   link.click();
   document.body.removeChild(link);
 }
+  }
+  else{
+    alert("Invalid password! Please try again.");
+  }
