@@ -8,7 +8,7 @@
 </head>
 <body>
     <nav class="navbar">
-        <h1>Surya Narayan Rao Seva Kendra</h1>
+        <h1>Shri Suryanarayanrao Seva Kendra</h1>
         <div class="navbar-buttons">
           <a href ="index.html"><button id="updateDataBtn">Create</button></a>
           <a href ="index2.html"><button id="showDataBtn">Show</button></a>
@@ -17,26 +17,30 @@
       </nav>
 
     <form id="searchForm">
-        <input type="text" id="phone" required>
+        <input type="text" id="phone" required placeholder="Phone Number">
+        <input class ="hello" type="number"  id="orderno" placeholder="Order Number" required>
         <button type="submit">Search</button>
     </form>
 
     <form class ="sameer" id="updateForm" style="display:none;">
         <!-- Add input fields to update details -->
-        <label for="name">Name:</label>
+        <label for="name">Name</label>
         <input type="text" id="name" required><br>
-        <label for="address">Address:</label>
+        <label for="address">Address</label>
         <input type="text" id="address"><br>
-        <label for="depoamt">Deposite Amount:</label>
+        <label for="depoamt">Deposite Amount</label>
         <input type="text" id="depoamt"><br>
-        <label for="recdamt">Received Amount:</label>
+        <label for="recdamt">Received Amount</label>
         <input type="text" id="recdamt"><br>
-        <label for="rentamt">Rent Amount:</label>
+        <label for="rentamt">Rent Amount</label>
         <input type="text" id="rentamt"><br>
-        <label for="orderDate">Order Date:</label>
+        <label for="orderDate">Order Date</label>
         <input type="date" id="orderDate"><br>
-        <label for="recivedorderDate">Recived Date:</label>
+        <label for="recivedorderDate">Recived Date</label>
         <input type="date" id="recivedorderDate"><br>
+        <label for="orderItemList">Order Items</label>
+        <ul id="orderItemList"></ul>
+
         <br>
         
         <!-- Add input fields for other details (address, phone, etc.) -->

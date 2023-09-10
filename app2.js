@@ -24,8 +24,7 @@ const ordersRef = database.ref("orders");
 // Fetch data and display in the table
 // ... Your existing code .
 // Fetch data and display in the table
-document.getElementById("fetchDataBtn").addEventListener("click", () => {
-    const password = prompt("Enter the password:");
+document.getElementById("fetchDataBtn").addEventListener("click", () => { 
       ordersRef.once("value", (snapshot) => {
         const tableBody = document.getElementById("tableBody"); // Correctly reference tbody element
         tableBody.innerHTML = ""; // Clear existing data
