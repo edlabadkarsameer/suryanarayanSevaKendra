@@ -33,6 +33,7 @@ document.getElementById("fetchDataBtn").addEventListener("click", () => {
           const orderData = orderSnapshot.val();
           const row = document.createElement("tr");
           row.innerHTML = `
+            <td>${orderData.orderno}</td>
             <td>${orderData.name}</td>
             <td>${orderData.address}</td>
             <td>${orderData.phone}</td>
@@ -57,11 +58,11 @@ document.getElementById("fetchDataBtn").addEventListener("click", () => {
 // Download data as Excel
 document.getElementById("downloadDataBtn").addEventListener("click", () => {
     ordersRef.once("value", (snapshot) => {
-      const data = [["Name", "Address", "Phone","Order Date", "Received Date", "Rent Amount", "Deposit Amount", "Received Amount", "Items"]];
+      const data = [["orderno", "Name", "Address", "Phone","Order Date", "Received Date", "Rent Amount", "Deposit Amount", "Received Amount", "Items"]];
       snapshot.forEach((orderSnapshot) => {
         const orderData = orderSnapshot.val();
         const foodItems = formatFoodItems(orderData.selectedItems);
-        data.push([orderData.name, orderData.address, orderData.phone,orderData.orderDate,orderData.recivedorderDate,orderData.rentamt,orderData.depoamt,orderData.recdamt, foodItems]);
+        data.push([orderData.orderno,orderData.name, orderData.address, orderData.phone,orderData.orderDate,orderData.recivedorderDate,orderData.rentamt,orderData.depoamt,orderData.recdamt, foodItems]);
       });
       exportToExcel(data);
     });

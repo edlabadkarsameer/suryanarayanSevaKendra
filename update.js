@@ -24,6 +24,8 @@ const recdamtInput = document.getElementById("recdamt");
 const rentamtInput = document.getElementById("rentamt");
 const orderDateInput = document.getElementById("orderDate");
 const recivedorderDateInput = document.getElementById("recivedorderDate");
+
+
 searchForm.addEventListener("submit", (e) => {
     e.preventDefault();
 

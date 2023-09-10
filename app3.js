@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   
     // Get user details from the form
+    const orderno = document.getElementById("orderno").value;
     const name = document.getElementById("name").value;
     const address = document.getElementById("address").value;
     const phone = document.getElementById("phone").value;
@@ -52,15 +53,16 @@ document.addEventListener("DOMContentLoaded", () => {
  
   
       // Save order details to Firebase
-      saveOrderToFirebase(name, address, phone, selectedItems, orderDate, recivedorderDate, rentamt, depoamt, recdamt, );
+      saveOrderToFirebase(orderno, name, address, phone, selectedItems, orderDate, recivedorderDate, rentamt, depoamt, recdamt, );
     });
     
-    function saveOrderToFirebase(name, address, phone, selectedItems, orderDate, recivedorderDate, rentamt, depoamt, recdamt,) {
+    function saveOrderToFirebase(orderno, name, address, phone, selectedItems, orderDate, recivedorderDate, rentamt, depoamt, recdamt,) {
       // Generate a unique ID for each order (you may use any ID generation logic)
       const orderId = database.ref().child("orders").push().key;
     
       // Create an object to hold order details
       const orderData = {
+        orderno,
         name,
         address,
         phone,
