@@ -113,7 +113,7 @@ body {
   
   /* Change button style on hover */  
   button:hover {
-    background-color: #0056b3; /* Darker color on hover */
+    background-color: orangered; /* Darker color on hover */
   }
 
 

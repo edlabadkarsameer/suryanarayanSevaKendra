@@ -35,7 +35,7 @@ body {
 }
 
 .navbar-buttons button {
-  background-color: #007bff;
+  background-color: orange;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -70,7 +70,7 @@ body {
 }
 
 #orderForm button[type="submit"] {
-  background-color: #007bff;
+  background-color: orange;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -83,7 +83,7 @@ body {
 
 /* Change button style on hover */
 button:hover {
-  background-color: #0056b3; /* Darker color on hover */
+  background-color: orangered; /* Darker color on hover */
 }
 
 /* Style the table */
@@ -143,7 +143,7 @@ table th, table td {
 /* Style the "Fetch Data" and "Download Data as Excel" buttons */
 
 #downloadDataBtn {
-    background-color: #007bff;
+    background-color: orange;
     color: white;
     border: none;
     padding: 12px 24px; /* Increase padding for better visibility and touch-friendly */
@@ -158,11 +158,11 @@ table th, table td {
 /* Change button style on hover */
 
 #downloadDataBtn:hover {
-    background-color: #0056b3; /* Darker color on hover */
+    background-color: orangered; /* Darker color on hover */
 }
 
 #fetchDataBtn {
-  background-color: #007bff;
+  background-color: orange;
   color: white;
   border: none;
   padding: 12px 24px; /* Increase padding for better visibility and touch-friendly */
@@ -177,5 +177,5 @@ table th, table td {
 /* Change button style on hover */
 
 #fetchDataBtn:hover {
-  background-color: #0056b3; /* Darker color on hover */
+  background-color: orangered; /* Darker color on hover */
 }
